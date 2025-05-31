@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
+    <title>Sign in</title>
   </head>
   <body>
-    <h2><%= title %></h2>
+    <h2>Sign in</h2>
     <form action="/signup" method="POST">
       <label for="name">Name</label>
-      <input type="text" name="name" id="name" required>
+      <input type="text" name="name" id="name" required />
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" required> 
+      <input type="password" name="password" id="password" required />
       <button type="submit">Submit</button>
+      <a href="/">Go back to homepage</a>
     </form>
   </body>
 </html>

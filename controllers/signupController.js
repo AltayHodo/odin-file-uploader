@@ -3,9 +3,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 async function signUpGet(req, res) {
-  res.render('signup-form', {
-    title: 'Sign up form',
-  });
+  res.render('signup-form');
 }
 
 async function signUpPost(req, res) {
