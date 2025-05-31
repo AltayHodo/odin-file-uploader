@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h2>Upload a file</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      select a folder:
+      <select name="folderId" required>
+        <% folders.forEach(folder => { %>
+        <option value="<%= folder.id %>"><%= folder.name %></option>
+        <% }) %>
+      </select>
+      <input type="file" name="myFile" required />
+      <button type="submit">Upload</button>
+    </form>
+    
+    <a href="/folders">Create a folder</a>
+    <a href="/">Back</a>
+  </body>
+</html>

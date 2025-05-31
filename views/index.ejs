@@ -9,11 +9,14 @@
     <h1><%= title %></h1>
 
     <% if (user) { %>
-      <p>You are logged in as <strong><%= user.name %></strong></p>
-      <a href="/logout">Log out</a>
+    <p>You are logged in as <strong><%= user.name %></strong></p>
+    <a href="/logout">Log out</a>
+    <a href="/upload">Upload a file</a>
+    <a href="/folders">Manage Folders</a>
+
     <% } else { %>
-      <a href="/signup">Sign up</a>
-      <a href="/login">Log in</a>
+    <a href="/signup">Sign up</a>
+    <a href="/login">Log in</a>
     <% } %>
   </body>
 </html>

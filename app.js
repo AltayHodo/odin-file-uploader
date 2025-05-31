@@ -23,9 +23,13 @@ app.use(passport.session());
 
 const signupRouter = require('./routes/signupRouter');
 const loginRouter = require('./routes/loginRouter');
+const uploadRouter = require('./routes/uploadRouter');
+const folderRouter = require('./routes/folderRouter');
 
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
+app.use('/upload', uploadRouter);
+app.use('/folders', folderRouter);
 
 app.get('/', (req, res) => {
   res.render('index', { title: 'File uploader', user: req.user });
