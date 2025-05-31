@@ -15,10 +15,11 @@ async function uploadPost(req, res) {
     data: {
       filename: req.file.originalname,
       path: req.file.path,
+      size: req.file.size,
       folderId: parseInt(req.body.folderId),
     },
   });
-  res.redirect('/upload')
+  res.redirect('/upload');
 }
 
 module.exports = {
